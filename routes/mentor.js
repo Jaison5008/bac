@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
  var mentorModel=require('../scheema/mentormoduel')  
- /*https://back-n4a5.onrender.com/mentor/get    */
+ //https://back-n4a5.onrender.com/mentor/get    
 
 router.get('/get', async function(req, res) { 
   try{
@@ -16,7 +16,7 @@ router.get('/get', async function(req, res) {
   
 });  
 
-/*https://back-n4a5.onrender.com/mentor/post */
+//https://back-n4a5.onrender.com/mentor/post 
 
 
 router.post('/post', async function(req, res) {  
@@ -36,7 +36,7 @@ router.post('/post', async function(req, res) {
   }
   
 });   
-/*https://back-n4a5.onrender.com/mentor/patch/65a6bd5bf66e219d14ddb145   */
+//https://back-n4a5.onrender.com/mentor/patch/65a6bd5bf66e219d14ddb145   
 
 
 router.patch('/patch/:id', async function(req, res) {  

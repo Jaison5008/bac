@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
  var studentModel=require('../scheema/studentmodules')
 
-/*get all students  https://back-n4a5.onrender.com/student/get   */ 
+//get all students  https://back-n4a5.onrender.com/student/get   
 
 router.get('/get', async function(req, res) { 
   try{
@@ -16,7 +16,7 @@ router.get('/get', async function(req, res) {
     
   
 });   
-/*get  students by id   https://back-n4a5.onrender.com/student/get/65a6bcb7f66e219d14ddb13d  */
+//get  students by id   https://back-n4a5.onrender.com/student/get/65a6bcb7f66e219d14ddb13d  
 router.get('/get/:id', async function(req, res) { 
   try{
        const students=  await studentModel.findOne({_id:req.params.id}) 
@@ -30,7 +30,7 @@ router.get('/get/:id', async function(req, res) {
   
 });  
 
-/*post students https://back-n4a5.onrender.com/student/post   */
+//post students https://back-n4a5.onrender.com/student/post   
 router.post('/post', async function(req, res) {  
   try{
   const student =await studentModel.findOne({email:req.body.email}) 
@@ -47,7 +47,7 @@ router.post('/post', async function(req, res) {
   }
   
 });  
-/*https://back-n4a5.onrender.com/student/patch/65a6bcb7f66e219d14ddb13d*/
+//https://back-n4a5.onrender.com/student/patch/65a6bcb7f66e219d14ddb13d
 router.patch('/patch/:id', async function(req, res) {  
   try{
   const student =await studentModel.findOne({_id:req.params.id}) 
