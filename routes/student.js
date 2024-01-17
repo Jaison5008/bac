@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
  var studentModel=require('../scheema/studentmodules')
 
-/*get all students*/
+/*get all students  https://back-n4a5.onrender.com/student/get   */ 
+
 router.get('/get', async function(req, res) { 
   try{
        const student=  await studentModel.find() 
@@ -15,7 +16,7 @@ router.get('/get', async function(req, res) {
     
   
 });   
-/*get  students by id*/
+/*get  students by id   https://back-n4a5.onrender.com/student/get/65a6bcb7f66e219d14ddb13d  */
 router.get('/get/:id', async function(req, res) { 
   try{
        const students=  await studentModel.findOne({_id:req.params.id}) 
@@ -29,7 +30,7 @@ router.get('/get/:id', async function(req, res) {
   
 });  
 
-/*post students*/
+/*post students https://back-n4a5.onrender.com/student/post   */
 router.post('/post', async function(req, res) {  
   try{
   const student =await studentModel.findOne({email:req.body.email}) 
@@ -46,14 +47,15 @@ router.post('/post', async function(req, res) {
   }
   
 });  
-
+/*https://back-n4a5.onrender.com/student/patch/65a6bcb7f66e219d14ddb13d*/
 router.patch('/patch/:id', async function(req, res) {  
   try{
   const student =await studentModel.findOne({_id:req.params.id}) 
   if(student) { 
       student.mentorId=req.body.mentorId  
-      student.save()
-     res.status(201).send({message:'mentor update sucessfull !!!'})
+      student.save() 
+      console.log(student)
+     res.status(201).send({message:'mentor update sucessfull !!!',students:student})
    
 
   } else { 
