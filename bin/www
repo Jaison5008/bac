@@ -8,7 +8,7 @@ var app = require('../app');
 var debug = require('debug')('student:server');
 var http = require('http');
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://jaison:Dtla8v85EHqisRXq@ac-izcmxll-shard-00-00.x1hj1hv.mongodb.net:27017,ac-izcmxll-shard-00-01.x1hj1hv.mongodb.net:27017,ac-izcmxll-shard-00-02.x1hj1hv.mongodb.net:27017/?replicaSet=atlas-81kuyw-shard-0&ssl=true&authSource=admin')
+mongoose.connect('mongodb://jaison:WyyHBXIs3mga8vRa@ac-izcmxll-shard-00-00.x1hj1hv.mongodb.net:27017,ac-izcmxll-shard-00-01.x1hj1hv.mongodb.net:27017,ac-izcmxll-shard-00-02.x1hj1hv.mongodb.net:27017/?replicaSet=atlas-81kuyw-shard-0&ssl=true&authSource=admin')
 /**
  * Get port from environment and store in Express.
  */
